@@ -21,7 +21,8 @@ class DecisionTree():
 
     def evaluate(self, env):
         """Given the environment, evaluate."""
-        evalulator_args = {k: v for k, v in env.items()}
+        evalulator_args = {k: v for k, v in env.items()
+                           if k in self.evaluator.__code__.co_varnames}
         result = self.evaluator(**evalulator_args)
         self.value = result
 
