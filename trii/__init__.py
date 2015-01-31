@@ -9,7 +9,7 @@ class DecisionTree():
             A child is a tuple of (condition, result).
             A condition is either a value (evaluated for equality), or a
                 predicate.
-            A result is either a DecisionTree, a function, or a value.
+            A result is either a DecisionTree, a function or a value.
         """
         self.evaluator = evaluator
         self.children = set(children)
